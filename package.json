@@ -5,12 +5,15 @@
     "ng": "ng",
     "dev": "npm run tokens && ng serve",
     "tokens": "node scripts/build-tokens.mjs",
-    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-figma.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/build-catalog.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-patterns.mjs && node scripts/check-figma.mjs",
     "build": "npm run tokens && ng build && tsc -p .storybook/tsconfig.json --noEmit",
     "storybook": "npm run tokens && ng run robur-ds:storybook",
     "build-storybook": "npm run tokens && ng run robur-ds:build-storybook",
     "test": "npm run check && vitest run",
-    "figma:tokens": "node scripts/figma-tokens.mjs"
+    "figma:tokens": "node scripts/figma-tokens.mjs",
+    "catalog": "node scripts/build-catalog.mjs",
+    "docs": "node scripts/build-docs.mjs && vitepress build site",
+    "docs:dev": "node scripts/build-docs.mjs && vitepress dev site"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +47,7 @@
     "tailwindcss": "^4.1.12",
     "typescript": "~6.0.2",
     "vite": "latest",
+    "vitepress": "^1.6.4",
     "vitest": "latest"
   },
   "type": "module"

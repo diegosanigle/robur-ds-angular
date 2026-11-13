@@ -46,5 +46,14 @@ Thumbs.db
 *storybook.log
 storybook-static
 
+# Web de documentación: las páginas se generan con npm run docs
+site/index.md
+site/tokens.md
+site/componentes
+site/patrones
+site/.vitepress/sidebar.json
+site/.vitepress/dist
+site/.vitepress/cache
+
 # Respuestas de los evals: se regeneran en cada ejecución
 evals/outputs
