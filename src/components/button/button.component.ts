@@ -16,6 +16,7 @@ const VARIANTS = {
       @if (loading()) {
         Guardando…
       } @else {
+        <!-- El texto del botón. -->
         <ng-content />
       }
     </button>

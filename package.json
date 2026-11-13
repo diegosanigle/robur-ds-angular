@@ -5,11 +5,12 @@
     "ng": "ng",
     "dev": "npm run tokens && ng serve",
     "tokens": "node scripts/build-tokens.mjs",
-    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-figma.mjs",
     "build": "npm run tokens && ng build && tsc -p .storybook/tsconfig.json --noEmit",
     "storybook": "npm run tokens && ng run robur-ds:storybook",
     "build-storybook": "npm run tokens && ng run robur-ds:build-storybook",
-    "test": "npm run check && vitest run"
+    "test": "npm run check && vitest run",
+    "figma:tokens": "node scripts/figma-tokens.mjs"
   },
   "private": true,
   "dependencies": {

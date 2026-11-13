@@ -8,6 +8,8 @@ const dirname = import.meta.dirname
 
 // Cada story de Storybook se ejecuta como un test en un navegador real.
 export default defineConfig({
+  // Vite prepara estas dependencias antes de empezar: si las descubre a mitad de los tests, recarga y fallan.
+  optimizeDeps: { include: ['@angular/common', '@angular/forms/signals'] },
   test: {
     projects: [
       {
