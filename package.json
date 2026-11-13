@@ -1,0 +1,49 @@
+{
+  "name": "robur-ds",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "dev": "npm run tokens && ng serve",
+    "tokens": "node scripts/build-tokens.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs",
+    "build": "npm run tokens && ng build && tsc -p .storybook/tsconfig.json --noEmit",
+    "storybook": "npm run tokens && ng run robur-ds:storybook",
+    "build-storybook": "npm run tokens && ng run robur-ds:build-storybook",
+    "test": "npm run check && vitest run"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^22.2.0",
+    "@angular/compiler": "^22.2.0",
+    "@angular/core": "^22.2.0",
+    "@angular/forms": "^22.2.0",
+    "@angular/platform-browser": "^22.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^2.7.3",
+    "@angular-devkit/architect": "^0.2202.0",
+    "@angular-devkit/core": "^22.2.0",
+    "@angular/animations": "^22.2.0",
+    "@angular/build": "^22.2.7",
+    "@angular/cli": "^22.2.7",
+    "@angular/compiler-cli": "^22.2.0",
+    "@storybook/addon-a11y": "^10.6.7",
+    "@storybook/addon-docs": "^10.6.7",
+    "@storybook/addon-vitest": "^10.6.7",
+    "@storybook/angular-vite": "^10.6.7",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "^24.19.2",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "playwright": "latest",
+    "postcss": "^8.5.3",
+    "storybook": "^10.6.7",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~6.0.2",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "type": "module"
+}

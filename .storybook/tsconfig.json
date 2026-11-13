@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler"
+  },
+  "exclude": [],
+  "include": [
+    "../src/**/*.ts",
+    "./preview.ts"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ]
+}
