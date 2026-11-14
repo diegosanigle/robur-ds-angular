@@ -5,7 +5,7 @@
     "ng": "ng",
     "dev": "npm run tokens && ng serve",
     "tokens": "node scripts/build-tokens.mjs",
-    "check": "node scripts/build-tokens.mjs && node scripts/build-catalog.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-patterns.mjs && node scripts/check-figma.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/build-catalog.mjs && node scripts/build-mcp-data.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-patterns.mjs && node scripts/check-figma.mjs && node scripts/check-usage.mjs && node scripts/check-mcp.mjs && node scripts/check-evals.mjs",
     "build": "npm run tokens && ng build && tsc -p .storybook/tsconfig.json --noEmit",
     "storybook": "npm run tokens && ng run robur-ds:storybook",
     "build-storybook": "npm run tokens && ng run robur-ds:build-storybook",
@@ -13,7 +13,11 @@
     "figma:tokens": "node scripts/figma-tokens.mjs",
     "catalog": "node scripts/build-catalog.mjs",
     "docs": "node scripts/build-docs.mjs && vitepress build site",
-    "docs:dev": "node scripts/build-docs.mjs && vitepress dev site"
+    "docs:dev": "node scripts/build-docs.mjs && vitepress dev site",
+    "mcp:data": "node scripts/build-mcp-data.mjs",
+    "mcp": "node scripts/check-mcp.mjs",
+    "evals": "node evals/run.mjs",
+    "metrics": "node scripts/metrics.mjs"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +27,9 @@
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^2.7.3",
@@ -50,5 +56,8 @@
     "vitepress": "^1.6.4",
     "vitest": "latest"
   },
-  "type": "module"
+  "type": "module",
+  "bin": {
+    "robur-ds-mcp": "mcp/server.mjs"
+  }
 }

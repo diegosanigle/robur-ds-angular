@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-11-13",
+    "components": 11,
+    "patterns": 3,
+    "stories": 58,
+    "figmaParity": 100,
+    "evalsWithMcp": null,
+    "appRawControls": null,
+    "appClassesOutsideSystem": null
+  },
+  {
+    "date": "2026-11-14",
+    "components": 11,
+    "patterns": 3,
+    "stories": 58,
+    "figmaParity": 100,
+    "evalsWithMcp": 100,
+    "appRawControls": null,
+    "appClassesOutsideSystem": null
+  }
+]
