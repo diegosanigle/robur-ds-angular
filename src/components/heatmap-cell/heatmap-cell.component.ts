@@ -13,8 +13,10 @@ const LEVELS = ['bg-heat-0', 'bg-heat-1', 'bg-heat-2', 'bg-heat-3', 'bg-heat-4']
 export class HeatmapCellComponent {
   /** Número de semana ISO, del 1 al 53. */
   readonly week = input.required<number>()
-  /** Sesiones registradas esa semana. Decide el nivel de color. */
+  /** Sesiones registradas esa semana. Las anuncia la celda y, si no se pasa level, deciden el color. */
   readonly sessions = input.required<number>()
+  /** Nivel de color, del 0 al 4, cuando lo calcula la app (por ejemplo, con sesiones ponderadas). */
+  readonly level = input<number>()
   /** Semana marcada como descanso: se distingue por el borde discontinuo, no por un color. */
   readonly rest = input(false, { transform: booleanAttribute })
   /** Es la semana en curso. */
@@ -35,7 +37,7 @@ export class HeatmapCellComponent {
   protected readonly classes = computed(() =>
     [
       'aspect-square min-h-3.5 rounded-xs transition-transform active:scale-95',
-      this.rest() ? 'border border-dashed border-control bg-surface' : LEVELS[Math.min(Math.max(this.sessions(), 0), 4)],
+      this.rest() ? 'border border-dashed border-control bg-surface' : LEVELS[Math.min(Math.max(Math.round(this.level() ?? this.sessions()), 0), 4)],
       this.current() ? 'outline-2 outline-offset-2 outline-heat-current' : '',
     ].join(' '),
   )

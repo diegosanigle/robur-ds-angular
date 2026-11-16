@@ -5,7 +5,7 @@ import { ButtonComponent } from './button.component'
 
 // Las entradas del componente, el contenido del botón y el clic nativo.
 type Args = {
-  variant?: 'primary' | 'secondary' | 'danger'
+  variant?: 'primary' | 'secondary' | 'danger' | 'text'
   fullWidth?: boolean
   loading?: boolean
   disabled?: boolean
@@ -35,6 +35,8 @@ export const Primary: Story = {}
 export const Secondary: Story = { args: { variant: 'secondary', content: 'Cancelar' } }
 
 export const Danger: Story = { args: { variant: 'danger', content: 'Borrar sesión' } }
+
+export const Text: Story = { args: { variant: 'text', content: 'Añadir ejercicio' } }
 
 export const Disabled: Story = { args: { disabled: true } }
 

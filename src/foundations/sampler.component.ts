@@ -1,14 +1,21 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
 import {
+  BarChartComponent,
   ButtonComponent,
   CardComponent,
   CheckboxComponent,
   ChipComponent,
   ExerciseRowComponent,
   HeatmapCellComponent,
+  HeatmapYearComponent,
+  IconComponent,
   InputComponent,
+  LineChartComponent,
+  ListRowComponent,
+  SelectComponent,
   StatCardComponent,
   TabsComponent,
+  WeekStripComponent,
 } from '..'
 
 // Una muestra con todos los componentes, para verlos juntos en los dos temas.
@@ -16,15 +23,22 @@ import {
   selector: 'robur-sampler',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    BarChartComponent,
     ButtonComponent,
     CardComponent,
     CheckboxComponent,
     ChipComponent,
     ExerciseRowComponent,
     HeatmapCellComponent,
+    HeatmapYearComponent,
+    IconComponent,
     InputComponent,
+    LineChartComponent,
+    ListRowComponent,
+    SelectComponent,
     StatCardComponent,
     TabsComponent,
+    WeekStripComponent,
   ],
   host: { class: 'flex flex-col gap-4 bg-page p-5 text-primary' },
   template: `
@@ -46,6 +60,21 @@ import {
       <robur-heatmap-cell [week]="15" [sessions]="0" rest />
       <robur-heatmap-cell [week]="16" [sessions]="2" current />
     </div>
+    <robur-heatmap-year [year]="2026" [weeks]="year" />
+    <robur-card variant="inverse"><robur-week-strip [days]="days" /></robur-card>
+    <robur-bar-chart title="Volumen semanal" [data]="bars" />
+    <robur-line-chart variant="inverse" title="Press de hombro, peso (kg)" [data]="line" />
+    <ul>
+      <robur-list-row title="Empuje" detail="Lun 9 nov · 6 ejercicios" (select)="noop()" />
+      <robur-list-row title="Press de hombro" detail="3 × 12"><robur-button variant="text">Quitar</robur-button></robur-list-row>
+      <robur-list-row title="Pierna" value="12" />
+    </ul>
+    <robur-select label="Ejercicio" placeholder="Elige un ejercicio" [options]="options" />
+    <div class="flex gap-3 text-primary">
+      <robur-icon name="home" size="lg" />
+      <robur-icon name="plus" size="lg" />
+      <robur-icon name="check" size="lg" />
+    </div>
     <div class="flex gap-2">
       <robur-chip selected>Empuje</robur-chip>
       <robur-chip>Tirón</robur-chip>
@@ -63,6 +92,7 @@ import {
       <robur-button>Guardar sesión</robur-button>
       <robur-button variant="secondary">Cancelar</robur-button>
       <robur-button variant="danger">Borrar sesión</robur-button>
+      <robur-button variant="text">Añadir ejercicio</robur-button>
     </div>
   `,
 })
@@ -74,4 +104,16 @@ export class SamplerComponent {
   ]
   /** @internal */
   protected readonly levels = [0, 1, 2, 3, 4]
+  /** @internal */
+  protected readonly year = Array.from({ length: 52 }, (_, i) => ({ week: i + 1, sessions: (i * 7) % 5, current: i === 45 }))
+  /** @internal */
+  protected readonly days = ['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((label, i) => ({ label, name: `día ${i + 1}`, done: i % 3 === 0, current: i === 3 }))
+  /** @internal */
+  protected readonly bars = [3, 1.5, 0, 2.5, 4, 2].map((value, i) => ({ label: String(40 + i), value }))
+  /** @internal */
+  protected readonly line = [20, 22.5, 22.5, 25, 27.5].map((value, i) => ({ label: `0${i + 1}-11`, value }))
+  /** @internal */
+  protected readonly options = [{ value: 'press', label: 'Press de hombro' }]
+  /** @internal */
+  protected readonly noop = () => {}
 }
