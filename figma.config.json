@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "include": ["figma/code-connect/*.figma.js"],
+    "label": "Angular",
+    "language": "html"
+  }
+}
