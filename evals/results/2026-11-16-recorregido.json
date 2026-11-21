@@ -1,0 +1,334 @@
+{
+  "date": "2026-11-21",
+  "model": "respuestas guardadas",
+  "cases": 12,
+  "conditions": {
+    "sin-sistema": {
+      "passed": 0,
+      "total": 6,
+      "rate": 0,
+      "cases": [
+        {
+          "id": "estado-vacio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "estado-vacio.ts",
+              "pass": false,
+              "failures": [
+                "unknown-class: La clase \"rounded-full\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-100\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-lg\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-800\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"outline-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no usa EmptyState"
+              ],
+              "rules": [
+                "unknown-class",
+                "no-raw-control"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "formulario-ejercicio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "formulario-ejercicio.ts",
+              "pass": false,
+              "failures": [
+                "unknown-class: La clase \"bg-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"ring-blue-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-red-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"ring-blue-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-red-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"ring-blue-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-red-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-700\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-gray-100\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-blue-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-blue-700\" no existe en el sistema. Consulta get_tokens.",
+                "no-raw-control: <input> dibujado a mano: usa Input o Checkbox (<robur-input>).",
+                "no-raw-control: <input> dibujado a mano: usa Input o Checkbox (<robur-input>).",
+                "no-raw-control: <input> dibujado a mano: usa Input o Checkbox (<robur-input>).",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no usa FormLayout",
+                "no usa Input"
+              ],
+              "rules": [
+                "unknown-class",
+                "no-raw-control"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "borrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "borrar-sesion.ts",
+              "pass": false,
+              "failures": [
+                "unknown-class: La clase \"bg-black\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"rounded-t-2xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"shadow-xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"rounded-full\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-700\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-lg\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-50\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-red-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-red-700\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"ring-red-400\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-800\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-100\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"ring-neutral-400\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-neutral-700\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-100\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-800\" no existe en el sistema. Consulta get_tokens.",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no usa Sheet",
+                "no usa Button",
+                "falta variant=\"danger\"",
+                "falta variant=\"secondary\""
+              ],
+              "rules": [
+                "unknown-class",
+                "no-raw-control"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "resumen-semana",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "resumen-semana.ts",
+              "pass": false,
+              "failures": [
+                "unknown-class: La clase \"rounded-2xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-neutral-200\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-6xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-neutral-200\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xs\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-neutral-200\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xs\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-500\" no existe en el sistema. Consulta get_tokens.",
+                "no usa StatCard"
+              ],
+              "rules": [
+                "unknown-class"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tipo-de-dia",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "tipo-de-dia.ts",
+              "pass": false,
+              "failures": [
+                "unknown-class: La clase \"bg-neutral-100\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-800\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-neutral-700\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-900\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-neutral-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no usa Chip"
+              ],
+              "rules": [
+                "unknown-class",
+                "no-raw-control"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "registrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "registrar-sesion.ts",
+              "pass": false,
+              "failures": [
+                "no-arbitrary: Valor arbitrario \"has-[:checked]\": usa una clase de la escala o propón un token.",
+                "no-arbitrary: Valor arbitrario \"has-[:checked]\": usa una clase de la escala o propón un token.",
+                "no-inline-style: Estilo en línea: usa clases de tokens.",
+                "unknown-class: La clase \"text-2xl\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"rounded-full\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-gray-200\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-green-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-green-600\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-green-50\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-xs\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-gray-500\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-green-50\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-green-800\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-black\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"bg-black\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"text-white\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-black\" no existe en el sistema. Consulta get_tokens.",
+                "unknown-class: La clase \"border-gray-300\" no existe en el sistema. Consulta get_tokens.",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "no-raw-control: <input> dibujado a mano: usa Input o Checkbox (<robur-input>).",
+                "no-raw-control: <button> dibujado a mano: usa Button (<robur-button>).",
+                "neutral-copy: Texto \"Sesión guardada. ¡Buen trabajo!\": \"¡\" suena a meta, a fallo o a exclamación. Robur registra, no juzga.",
+                "no usa SessionLog",
+                "contiene «%», y el caso lo prohíbe"
+              ],
+              "rules": [
+                "no-arbitrary",
+                "no-inline-style",
+                "unknown-class",
+                "no-raw-control",
+                "neutral-copy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "con-mcp": {
+      "passed": 6,
+      "total": 6,
+      "rate": 100,
+      "cases": [
+        {
+          "id": "estado-vacio",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "estado-vacio.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        },
+        {
+          "id": "formulario-ejercicio",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "formulario-ejercicio.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        },
+        {
+          "id": "borrar-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "borrar-sesion.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        },
+        {
+          "id": "resumen-semana",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "resumen-semana.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        },
+        {
+          "id": "tipo-de-dia",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "tipo-de-dia.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        },
+        {
+          "id": "registrar-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "registrar-sesion.ts",
+              "pass": true,
+              "failures": [],
+              "rules": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "graded": "evals/answers/2026-11-16"
+}
