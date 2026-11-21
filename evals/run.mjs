@@ -52,6 +52,9 @@ export function rulesPrompt() {
 const SPANISH_GROUPING = /useGrouping\s*:\s*(?:true|['"]always['"])/
 const isYear = (n) => n.length === 4 && Number(n) >= 1900 && Number(n) <= 2099
 
+/** El texto que ve la persona: entre etiquetas y en atributos de texto (no clases, claves ni ids). */
+const visibleTexts = (code) => [...code.matchAll(/>([^<>{}]+)</g), ...code.matchAll(/\b(?!className|class\b|key|id\b)[a-zA-Z-]+="([^"]*)"/g)].map((m) => m[1])
+
 /** Cifras que no saldrían con formato español: «2480» en vez de «2.480», «62.5» en vez de «62,5». */
 export function numberFormatIssues(code) {
   const issues = []
@@ -65,8 +68,7 @@ export function numberFormatIssues(code) {
   // En Angular, el pipe number usa el locale de la app (en-US si no se cambia): pide el español en el propio pipe.
   for (const [pipe] of code.matchAll(/\|\s*number\b(?:\s*:\s*['"][^'"]*['"])*/g)) if (!/['"]es/.test(pipe)) issues.push(`cifra sin formato español: «${pipe.trim()}» sin locale español escribe «2,480»`)
   // Cifras de cuatro o más dígitos escritas a mano, en el texto o en un atributo de texto.
-  const texts = [...code.matchAll(/>([^<>{}]+)</g), ...code.matchAll(/\b(?!className|class\b|key|id\b)[a-zA-Z-]+="([^"]*)"/g)].map((m) => m[1])
-  for (const text of texts) for (const [n] of text.matchAll(/(?<![\d.,])\d{4,}(?![\d.,]\d)/g)) if (!isYear(n)) issues.push(`cifra sin formato español: «${text.trim()}» escribe ${n} sin punto de miles`)
+  for (const text of visibleTexts(code)) for (const [n] of text.matchAll(/(?<![\d.,])\d{4,}(?![\d.,]\d)/g)) if (!isYear(n)) issues.push(`cifra sin formato español: «${text.trim()}» escribe ${n} sin punto de miles`)
   return issues
 }
 
@@ -104,7 +106,8 @@ export function grade(testCase, answer) {
     ...(option.avoids ?? []).filter((name) => usesPiece(code, name)).map((name) => `usa ${name}, y no debería`),
     ...(option.contains ?? []).filter((text) => !code.includes(text)).map((text) => `falta ${text}`),
   ])
-  const forbidden = (testCase.forbids ?? []).map((source) => new RegExp(source, 'i').exec(code)?.[0]).filter(Boolean)
+  const shown = visibleTexts(code).join('\n')
+  const forbidden = (testCase.forbids ?? []).map((source) => new RegExp(source, 'i').exec(shown)?.[0]).filter(Boolean)
   const failures = [
     ...issues.map((i) => `${i.rule}: ${i.message}`),
     ...(options.find((o) => o.length === 0) ?? options[0]),
