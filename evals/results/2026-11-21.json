@@ -1,0 +1,613 @@
+{
+  "date": "2026-11-21",
+  "model": "sonnet",
+  "passes": 1,
+  "cases": 12,
+  "conditions": {
+    "sin-sistema": {
+      "passed": 0,
+      "total": 12,
+      "rate": 0,
+      "cases": [
+        {
+          "id": "estado-vacio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "estado-vacio.1.txt",
+              "pass": false,
+              "failures": [
+                "responde en texto"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0244449
+            }
+          ]
+        },
+        {
+          "id": "formulario-ejercicio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "formulario-ejercicio.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0198909
+            }
+          ]
+        },
+        {
+          "id": "borrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "borrar-sesion.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.018956900000000002
+            }
+          ]
+        },
+        {
+          "id": "resumen-semana",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "resumen-semana.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0190249
+            }
+          ]
+        },
+        {
+          "id": "tipo-de-dia",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "tipo-de-dia.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0201969
+            }
+          ]
+        },
+        {
+          "id": "registrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "registrar-sesion.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0197629
+            }
+          ]
+        },
+        {
+          "id": "aviso-guardado",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "aviso-guardado.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0204969
+            }
+          ]
+        },
+        {
+          "id": "calendario-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "calendario-sesion.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0197869
+            }
+          ]
+        },
+        {
+          "id": "elegir-ejercicio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "elegir-ejercicio.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.021362899999999997
+            }
+          ]
+        },
+        {
+          "id": "progreso-peso",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "progreso-peso.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.020856899999999998
+            }
+          ]
+        },
+        {
+          "id": "pantalla-progreso",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "pantalla-progreso.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0284429
+            }
+          ]
+        },
+        {
+          "id": "migrar-lista",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "migrar-lista.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0436309
+            }
+          ]
+        }
+      ]
+    },
+    "con-reglas": {
+      "passed": 6,
+      "total": 12,
+      "rate": 50,
+      "cases": [
+        {
+          "id": "estado-vacio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "estado-vacio.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0460178
+            }
+          ]
+        },
+        {
+          "id": "formulario-ejercicio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "formulario-ejercicio.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.047177800000000006
+            }
+          ]
+        },
+        {
+          "id": "borrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "borrar-sesion.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0412078
+            }
+          ]
+        },
+        {
+          "id": "resumen-semana",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "resumen-semana.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0519118
+            }
+          ]
+        },
+        {
+          "id": "tipo-de-dia",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "tipo-de-dia.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.049001800000000005
+            }
+          ]
+        },
+        {
+          "id": "registrar-sesion",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "registrar-sesion.1.ts",
+              "pass": false,
+              "failures": [
+                "missing-prop: A SessionLog le falta la prop obligatoria \"dayTypes\".",
+                "missing-prop: A SessionLog le falta la prop obligatoria \"dayType\".",
+                "missing-prop: A SessionLog le falta la salida obligatoria \"dayTypeChange\".",
+                "missing-prop: A SessionLog le falta la prop obligatoria \"exercises\".",
+                "missing-prop: A SessionLog le falta la salida obligatoria \"exerciseChange\".",
+                "missing-prop: A SessionLog le falta la salida obligatoria \"save\"."
+              ],
+              "rules": [
+                "missing-prop"
+              ],
+              "turns": 1,
+              "cost": 0.0469478
+            }
+          ]
+        },
+        {
+          "id": "aviso-guardado",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "aviso-guardado.1.txt",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0452578
+            }
+          ]
+        },
+        {
+          "id": "calendario-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "calendario-sesion.1.txt",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0489318
+            }
+          ]
+        },
+        {
+          "id": "elegir-ejercicio",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "elegir-ejercicio.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0426898
+            }
+          ]
+        },
+        {
+          "id": "progreso-peso",
+          "passed": 0,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "progreso-peso.1.txt",
+              "pass": false,
+              "failures": [
+                "escribe una llamada a herramienta, no una respuesta"
+              ],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0419998
+            }
+          ]
+        },
+        {
+          "id": "pantalla-progreso",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "pantalla-progreso.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.060651800000000006
+            }
+          ]
+        },
+        {
+          "id": "migrar-lista",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "migrar-lista.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 1,
+              "cost": 0.0577298
+            }
+          ]
+        }
+      ]
+    },
+    "con-mcp": {
+      "passed": 12,
+      "total": 12,
+      "rate": 100,
+      "cases": [
+        {
+          "id": "estado-vacio",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "estado-vacio.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 4,
+              "cost": 0.046472799999999995
+            }
+          ]
+        },
+        {
+          "id": "formulario-ejercicio",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "formulario-ejercicio.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 6,
+              "cost": 0.0683902
+            }
+          ]
+        },
+        {
+          "id": "borrar-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "borrar-sesion.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 4,
+              "cost": 0.0431115
+            }
+          ]
+        },
+        {
+          "id": "resumen-semana",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "resumen-semana.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 5,
+              "cost": 0.0465811
+            }
+          ]
+        },
+        {
+          "id": "tipo-de-dia",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "tipo-de-dia.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 7,
+              "cost": 0.0583965
+            }
+          ]
+        },
+        {
+          "id": "registrar-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "registrar-sesion.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 5,
+              "cost": 0.0624117
+            }
+          ]
+        },
+        {
+          "id": "aviso-guardado",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "aviso-guardado.1.txt",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 3,
+              "cost": 0.0382106
+            }
+          ]
+        },
+        {
+          "id": "calendario-sesion",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "calendario-sesion.1.txt",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 2,
+              "cost": 0.031691300000000006
+            }
+          ]
+        },
+        {
+          "id": "elegir-ejercicio",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "elegir-ejercicio.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 4,
+              "cost": 0.0420859
+            }
+          ]
+        },
+        {
+          "id": "progreso-peso",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "progreso-peso.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 4,
+              "cost": 0.0438982
+            }
+          ]
+        },
+        {
+          "id": "pantalla-progreso",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "pantalla-progreso.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 11,
+              "cost": 0.10550029999999999
+            }
+          ]
+        },
+        {
+          "id": "migrar-lista",
+          "passed": 1,
+          "total": 1,
+          "runs": [
+            {
+              "answer": "migrar-lista.1.ts",
+              "pass": true,
+              "failures": [],
+              "rules": [],
+              "turns": 6,
+              "cost": 0.0633175
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "graded": "evals/answers/2026-11-21"
+}

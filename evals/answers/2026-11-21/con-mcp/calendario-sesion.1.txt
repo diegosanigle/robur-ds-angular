@@ -1,0 +1,17 @@
+Falta una pieza: un selector de fecha (calendario mensual) para elegir el día de una sesión pasada.
+
+Lo que hay no sirve para esto:
+- WeekStrip solo muestra los siete días de la semana en curso, así que no llega a días pasados de otras semanas.
+- HeatmapYear y HeatmapCell trabajan por semana ISO, no por día.
+- Input y Select no dan una vista de calendario. Un Input de texto con la fecha escrita sería una solución a medias.
+- Dibujar una rejilla de días con <button> y estilos propios rompe las reglas del sistema.
+
+Propuesta: añadir un componente DatePicker (<robur-date-picker>) con estas características:
+- Rejilla mensual con flechas para cambiar de mes y semana que empieza en lunes.
+- Props: value, max (por defecto hoy, para que solo se puedan elegir días pasados o el día de hoy), min y markedDates (días con sesión, como en WeekStrip).
+- Salida: (change) con la fecha elegida.
+- Días futuros deshabilitados, estado seleccionado, foco visible y navegación con teclado.
+- Etiqueta de campo sin dos puntos, por ejemplo «Día de la sesión».
+- Se usaría dentro de una Sheet o de un FormLayout, con los botones «Elegir día» y «Cancelar».
+
+Cuando exista, el componente de pantalla sería una Sheet con el DatePicker y un Button primary «Elegir día».

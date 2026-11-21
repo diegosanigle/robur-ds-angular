@@ -1,0 +1,4 @@
+
+<invoke name="Bash">
+<parameter name="command">ls -la; ls node_modules/robur-ds 2>/dev/null | head -50; find . -maxdepth 4 -iname "*robur*" -not -path "./node_modules/.cache/*" 2>/dev/null | head</parameter>
+</invoke>

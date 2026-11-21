@@ -1,0 +1,22 @@
+Falta: un calendario para elegir una fecha. No hay ninguna pieza que lo resuelva.
+
+- `Input` es de una línea para texto o cifras, no tiene tipo fecha ni calendario.
+- `Select` es una lista de opciones, no sirve para recorrer meses.
+- `HeatmapCell`, `HeatmapYear` y `WeekStrip` solo muestran sesiones, no se pueden pulsar para elegir un día.
+- `Icon` no tiene `chevron-left`, que haría falta para pasar al mes anterior.
+
+No he dibujado el calendario a mano porque rompería las reglas del sistema.
+
+Propongo:
+
+1. Componente nuevo `DatePicker` (`<robur-date-picker>`), con la skill `/nuevo-componente`:
+   - Props: `label`, `hint`, `error`, `value` (con `model()`), `max` (para limitar a días pasados; por defecto, hoy) y `min`.
+   - Rejilla de meses con semana que empieza en lunes, nombres en español y navegación mes a mes.
+   - Cada día es un botón de 44 px de alto como mínimo. Con nombre accesible, por ejemplo «21 de noviembre de 2026».
+   - Los días fuera de rango aparecen deshabilitados. El día elegido usa `bg-selected` y `text-on-selected`. El día de hoy se marca con `border-action`.
+   - Se compone con `Icon` y `Button` (variante `text`) para la navegación y, si se muestra en hoja, con `Sheet`.
+   - Stories para cada estado (vacío, con valor, con error, con días deshabilitados) y una story `Interaccion`.
+2. Icono nuevo `chevron-left` en `Icon`.
+3. Opcional: un patrón `SessionDatePicker`, con el campo de fecha que abre el calendario en un `Sheet`, para registrar sesiones pasadas dentro de `SessionLog`.
+
+Mientras tanto, si basta con elegir entre los últimos días, se puede usar `Select` con opciones como «Ayer» o «Hace 2 días». No sustituye a un calendario.

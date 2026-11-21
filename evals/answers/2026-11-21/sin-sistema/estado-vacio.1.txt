@@ -1,0 +1,11 @@
+No puedo construir este componente sin inventar piezas: no tengo acceso al contenido de "robur-ds" (ni su API, selectores, inputs/outputs ni tokens), y el directorio de trabajo no contiene el paquete ni documentación del Design System.
+
+Lo que necesita este estado vacío del historial:
+- Un componente de estado vacío (empty state): icono/ilustración, título, texto descriptivo.
+- Un botón primario del DS para la acción "Registrar sesión".
+- Tokens de espaciado y tipografía del DS (para no usar valores a mano con Tailwind).
+
+Qué propongo:
+1. Indícame si el DS tiene un componente de estado vacío (p. ej. algo como "robur-empty-state") y un botón (p. ej. "robur-button"), con sus nombres reales y sus inputs/outputs, o dame acceso a node_modules/robur-ds o a su documentación.
+2. Si el DS no tiene un componente de estado vacío, propongo añadirlo al DS (con slots para icono, título, descripción y acción) en lugar de maquetarlo a mano en la app.
+3. Con eso te entrego el componente standalone con textos en español: "Esta semana aún no tienes sesiones" y la acción "Registrar sesión", emitiendo un evento (output) para que la pantalla de historial navegue al registro.

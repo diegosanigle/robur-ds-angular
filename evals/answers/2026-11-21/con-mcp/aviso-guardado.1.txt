@@ -1,0 +1,9 @@
+Falta una pieza: el sistema no tiene un aviso temporal (Toast / Snackbar). El catálogo no incluye ningún componente para mostrar un mensaje breve que se cierre solo. SessionLog solo emite `save` y no confirma nada. Sheet es modal y ConfirmSheet pide confirmación antes de una acción, así que ninguno encaja. Un `<div>` con estilos propios y un `setTimeout` sería construir a mano algo que el sistema debe definir.
+
+Propuesta: añadir un componente `Toast` (`<robur-toast>`) con estas características:
+- Props: `message` (string), `open` (boolean) y `duration` (ms, por defecto 4000). Emite `dismiss` al cerrarse.
+- Un solo tono neutro de confirmación, sin variantes de error ni de meta, porque Robur registra y no juzga.
+- Se ancla abajo, por encima de BottomNav.
+- Accesibilidad: `role="status"` con `aria-live="polite"`, sin robar el foco. El cierre automático no debe ser la única vía, así que ofrece también un botón para cerrarlo.
+- Texto de ejemplo: «Sesión guardada».
+- Tokens: necesita una superficie y un texto con contraste suficiente (por ejemplo `bg-inverse` con su texto) y una sombra del catálogo.

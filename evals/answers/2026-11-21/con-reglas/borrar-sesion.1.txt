@@ -1,0 +1,6 @@
+Voy a leer el contrato del patrón antes de usarlo.
+
+
+<invoke name="Read">
+<parameter name="file_path">/private/var/folders/kj/ct_nggss1lz0rl9q69w2stj00000gn/T/robur-eval-SfgSMK/src/patterns/confirm-sheet/ConfirmSheet.pattern.json</parameter>
+</invoke>

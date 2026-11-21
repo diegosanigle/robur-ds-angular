@@ -1,0 +1,15 @@
+Falta una pieza: el catálogo no tiene ningún componente de aviso temporal (toast). Ni Sheet, ni Card, ni ScreenState sirven. Sheet es modal y exige cerrarlo, Card no se descarta sola y ScreenState es para carga y error. Un aviso que desaparece solo no se puede montar con lo que hay sin dibujar una superficie nueva a mano, y los patrones no pueden hacerlo.
+
+Propongo:
+
+1. Componente nuevo `Toast` (`<robur-toast>`) en `src/components/toast/`, creado con la skill /nuevo-componente: primero el contrato `Toast.contract.json`, después el código, las stories y `Interaccion`.
+   - Props: `open`, `duration` (milisegundos hasta que se cierra solo), `children` (el texto).
+   - Salida: `onClose`, que avisa cuando desaparece.
+   - Accesibilidad: `role="status"` con `aria-live="polite"`, para que se anuncie sin quitar el foco.
+   - Variante: `success`, que usa `bg-success-soft` y `text-success`. Si hace falta otra pareja de colores, hay que añadirla a `tokens/contrast.json`.
+   - Posición: encima de `BottomNav`, sin tapar la navegación.
+   - Texto de ejemplo: «Sesión guardada».
+
+2. Después, un patrón opcional `SaveFeedback` que combine `Toast` con `SessionLog`, solo si el aviso se va a repetir en otras pantallas.
+
+Con el `Toast` aprobado, escribo el componente de la pantalla que lo usa.
